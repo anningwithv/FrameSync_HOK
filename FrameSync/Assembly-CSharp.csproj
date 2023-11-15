@@ -36,7 +36,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Scripts\02Systems\LoginSys.cs" />
+     <Compile Include="Assets\Scripts\02Systems\BattleSys.cs" />
+     <Compile Include="Assets\Scripts\02Systems\SysRoot.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\TipsWnd.cs" />
+     <Compile Include="Assets\Scripts\01Services\ResSvc.cs" />
+     <Compile Include="Assets\Scripts\02Systems\LobbySys.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\WindowRoot.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\LoginWnd.cs" />
+     <Compile Include="Assets\Scripts\01Services\AudioSvc.cs" />
+     <Compile Include="Assets\Scripts\00Common\Constant.cs" />
+     <Compile Include="Assets\Scripts\00Common\GameRoot.cs" />
+     <Compile Include="Assets\Scripts\01Services\NetSvc.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -284,7 +295,10 @@
         <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PEUtils">
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Assets\Scripts\00Common\Libs\PEUtils.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -665,103 +679,103 @@
         <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PPv2URPConverters">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>D:\Study\FrameSyncDemo\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
