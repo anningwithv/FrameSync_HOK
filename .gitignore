@@ -3,4 +3,4 @@ FrameSync/Logs/
 FrameSync/UserSettings/
 FrameSync/.vscode/
 FrameSync/Temp/
-FrameSync/.vsconfig
+FrameSync/obj/
