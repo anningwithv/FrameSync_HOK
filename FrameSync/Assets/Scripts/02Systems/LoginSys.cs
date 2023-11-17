@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FrameSyncProtocol;
 using UnityEngine;
 
 public class LoginSys : SysRoot
@@ -7,6 +8,7 @@ public class LoginSys : SysRoot
     public static LoginSys Instance;
 
     public LoginWnd loginWnd;
+    public StartWnd startWnd;
 
     public override void InitSys()
     {
@@ -20,5 +22,21 @@ public class LoginSys : SysRoot
     {
         loginWnd.SetWndState();
         audioSvc.PlayBGMusic(NameDefine.MainCityBGMusic);
+    }
+
+
+    public void RspLogin(HOKMsg msg)
+    {
+        root.ShowTips("登录成功");
+        root.UserData = msg.rspLogin.userData;
+
+        startWnd.SetWndState();
+        loginWnd.SetWndState(false);
+    }
+
+    public void EnterLobby()
+    {
+        startWnd.SetWndState(false);
+        LobbySys.Instance.EnterLobby();
     }
 }

@@ -1,24 +1,18 @@
 ﻿/*************************************************
-	作者: Plane
-	邮箱: 1785275942@qq.com
-	日期: 2021/02/09 22:05
 	功能: 登录窗口
-
-    //=================*=================\\
-           关注微信公众号: PlaneZhong
-           关注微信服务号: qiqikertuts
-               ~~获取更多教学资讯~~
-    \\=================*=================//
 *************************************************/
 
+using FrameSyncProtocol;
 using UnityEngine.UI;
 
-public class LoginWnd : WindowRoot {
+public class LoginWnd : WindowRoot
+{
     public InputField iptAcct;
     public InputField iptPass;
     public Toggle togSrv;
 
-    protected override void InitWnd() {
+    protected override void InitWnd()
+    {
         base.InitWnd();
 
         System.Random rd = new System.Random();
@@ -26,15 +20,31 @@ public class LoginWnd : WindowRoot {
         iptPass.text = rd.Next(100, 999).ToString();
     }
 
-    public void ClickLoginBtn() {
+    public void ClickLoginBtn()
+    {
         audioSvc.PlayUIAudio("loginBtnClick");
-        if(iptAcct.text.Length >= 3 && iptPass.text.Length >= 3) {
-            //TODO 发送网络消息，请求登录服务器
-            root.AddTips("请求登录");
+        if (iptAcct.text.Length >= 3 && iptPass.text.Length >= 3)
+        {
+            HOKMsg msg = new HOKMsg
+            {
+                cmd = CMD.ReqLogin,
+                reqLogin = new ReqLogin
+                {
+                    acct = iptAcct.text,
+                    pass = iptPass.text
+                }
+            };
+            netSvc.SendMsg(msg, (bool result) =>
+            {
+                if (result == false)
+                {
+                    netSvc.InitSvc();
+                }
+            });
         }
-        else {
-            //POP Tips
-            root.AddTips("账号或密码为空");
+        else
+        {
+            root.ShowTips("账号或密码为空");
         }
     }
 }

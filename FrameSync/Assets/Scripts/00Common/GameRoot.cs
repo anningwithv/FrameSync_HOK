@@ -1,4 +1,5 @@
-﻿using PEUtils;
+﻿using FrameSyncProtocol;
+using PEUtils;
 using UnityEngine;
 
 public class GameRoot : MonoBehaviour
@@ -74,8 +75,17 @@ public class GameRoot : MonoBehaviour
         login.EnterLogin();
     }
 
-    public void AddTips(string tips)
+    public void ShowTips(string tips)
     {
         tipsWnd.AddTips(tips);
     }
+
+    #region
+    UserData userData;
+    public UserData UserData
+    {
+        set { userData = value; }
+        get { return userData; }
+    }
+    #endregion
 }

@@ -36,18 +36,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\02Systems\LoginSys.cs" />
      <Compile Include="Assets\Scripts\02Systems\BattleSys.cs" />
-     <Compile Include="Assets\Scripts\02Systems\SysRoot.cs" />
      <Compile Include="Assets\Scripts\03UIWindow\TipsWnd.cs" />
-     <Compile Include="Assets\Scripts\01Services\ResSvc.cs" />
-     <Compile Include="Assets\Scripts\02Systems\LobbySys.cs" />
-     <Compile Include="Assets\Scripts\03UIWindow\WindowRoot.cs" />
-     <Compile Include="Assets\Scripts\03UIWindow\LoginWnd.cs" />
-     <Compile Include="Assets\Scripts\01Services\AudioSvc.cs" />
      <Compile Include="Assets\Scripts\00Common\Constant.cs" />
+     <Compile Include="Assets\Scripts\01Services\ResSvc.cs" />
+     <Compile Include="Assets\Scripts\01Services\AudioSvc.cs" />
+     <Compile Include="Assets\Scripts\02Systems\SysRoot.cs" />
+     <Compile Include="Assets\Scripts\02Systems\LobbySys.cs" />
+     <Compile Include="Assets\Scripts\02Systems\LoginSys.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\WindowRoot.cs" />
      <Compile Include="Assets\Scripts\00Common\GameRoot.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\LoginWnd.cs" />
      <Compile Include="Assets\Scripts\01Services\NetSvc.cs" />
+     <Compile Include="Assets\Scripts\01Services\ClientSession.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\LobbyWnd.cs" />
+     <Compile Include="Assets\Scripts\03UIWindow\StartWnd.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -299,6 +302,18 @@
     </Reference>
     <Reference Include="PEUtils">
         <HintPath>D:\Study\FrameSync_HOK\FrameSync\Assets\Scripts\00Common\Libs\PEUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="KCPNet">
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Assets\Scripts\00Common\Libs\Debug\netstandard2.0\KCPNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Kcp">
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Assets\Scripts\00Common\Libs\Debug\netstandard2.0\Kcp.dll</HintPath>
+    </Reference>
+    <Reference Include="FrameSyncProtocol">
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Assets\Scripts\00Common\Libs\Debug\netstandard2.0\FrameSyncProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+        <HintPath>D:\Study\FrameSync_HOK\FrameSync\Assets\Scripts\00Common\Libs\Debug\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
