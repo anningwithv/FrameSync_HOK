@@ -7,3 +7,5 @@ FrameSync/obj/
 Server/FrameSyncServer/.vs/
 Server/FrameSyncServer/FrameSyncServer/bin/
 Server/FrameSyncServer/FrameSyncServer/obj/
+Server/FrameSyncServer/FrameSyncProtocol/obj/
+Server/FrameSyncServer/FrameSyncProtocol/bin/
