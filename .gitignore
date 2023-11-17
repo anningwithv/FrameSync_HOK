@@ -4,3 +4,6 @@ FrameSync/UserSettings/
 FrameSync/.vscode/
 FrameSync/Temp/
 FrameSync/obj/
+Server/FrameSyncServer/.vs/
+Server/FrameSyncServer/FrameSyncServer/bin/
+Server/FrameSyncServer/FrameSyncServer/obj/
