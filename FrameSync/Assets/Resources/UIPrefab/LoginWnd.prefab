@@ -1765,8 +1765,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1467187067525095151}
+        m_TargetAssemblyTypeName: LoginWnd, Assembly-CSharp
         m_MethodName: ClickLoginBtn
         m_Mode: 1
         m_Arguments:
