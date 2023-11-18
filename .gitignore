@@ -3,9 +3,11 @@ FrameSync/Logs/
 FrameSync/UserSettings/
 FrameSync/.vscode/
 FrameSync/Temp/
-<<<<<<< Updated upstream
 FrameSync/obj/
-=======
-FrameSync/.vsconfig
->>>>>>> Stashed changes
+Server/FrameSyncServer/.vs/
+Server/FrameSyncServer/FrameSyncServer/bin/
+Server/FrameSyncServer/FrameSyncServer/obj/
+Server/FrameSyncServer/FrameSyncProtocol/obj/
+Server/FrameSyncServer/FrameSyncProtocol/bin/
 FrameSync/.vs/
+FrameSync/.vsconfig

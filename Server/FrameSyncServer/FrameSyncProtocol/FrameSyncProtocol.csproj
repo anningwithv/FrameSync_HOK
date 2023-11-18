@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <BaseOutputPath>../../../FrameSync/Assets/Scripts/00Common/Libs</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Kcp">
+      <HintPath>..\FrameSyncServer\Libs\KCPNetLibs\Kcp.dll</HintPath>
+    </Reference>
+    <Reference Include="KCPNet">
+      <HintPath>..\FrameSyncServer\Libs\KCPNetLibs\KCPNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
