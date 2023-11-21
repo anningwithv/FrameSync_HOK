@@ -14,6 +14,16 @@ namespace FrameSyncProtocol
         public RspLogin rspLogin;
         public ReqMatch reqMatch;
         public RspMatch rspMatch;
+        public NtfConfirm ntfConfirm;
+        public SndConfirm sndConfirm;
+        //public NtfSelect ntfSelect;
+        public SndSelect sndSelect;
+        public NtfLoadRes ntfLoadRes;
+        public SndLoadPrg sndLoadPrg;
+        public NtfLoadPrg ntfLoadPrg;
+
+        public ReqBattleStart reqBattleStart;
+        public RspBatlleStart rspBatlleStart;
     }
 
     #region 登录相关
@@ -73,8 +83,84 @@ namespace FrameSyncProtocol
     {
         public int predictTime;
     }
+
+    [Serializable]
+    public class NtfConfirm
+    {
+        public uint roomID;
+        public bool dissmiss;//解散
+        public ConfirmData[] confirmArr;
+    }
+    [Serializable]
+    public class ConfirmData
+    {
+        public int iconIndex;
+        public bool confirmDone;
+    }
+    [Serializable]
+    public class SndConfirm
+    {
+        public uint roomID;
+    }
     #endregion
 
+    #region 选择加载
+    //[Serializable]
+    //public class NtfSelect {
+
+    //}
+    [Serializable]
+    public class SelectData
+    {
+        public int selectID;
+        public bool selectDone;
+    }
+    [Serializable]
+    public class SndSelect
+    {
+        public uint roomID;
+        public int heroID;
+    }
+    [Serializable]
+    public class NtfLoadRes
+    {
+        public int mapID;
+        public List<BattleHeroData> heroList;
+        public int posIndex;
+    }
+    [Serializable]
+    public class BattleHeroData
+    {
+        public string userName;//玩家名字
+        public int heroID;
+        //级别，皮肤ID,边框，称号TODO
+    }
+    [Serializable]
+    public class SndLoadPrg
+    {
+        public uint roomID;
+        public int percent;
+    }
+    [Serializable]
+    public class NtfLoadPrg
+    {
+        public List<int> percentLst;
+    }
+    #endregion
+
+    #region 核心战斗
+    [Serializable]
+    public class ReqBattleStart
+    {
+        public uint roomID;
+    }
+    [Serializable]
+    public class RspBatlleStart
+    {
+
+    }
+
+    #endregion
     //错误码
     public enum ErrorCode
     {
@@ -93,6 +179,23 @@ namespace FrameSyncProtocol
         //匹配
         ReqMatch = 3,
         RspMatch = 4,
+
+        //确认
+        NtfConfirm = 5,
+        SndConfirm = 6,
+
+        //选择
+        NtfSelect = 7,
+        SndSelect = 8,
+
+        //加载
+        NtfLoadRes = 9,
+        SndLoadPrg = 10,
+        NtfLoadPrg = 11,
+
+        //战斗
+        ReqBattleStart = 12,
+        RspBattleStart = 13,
     }
 
     

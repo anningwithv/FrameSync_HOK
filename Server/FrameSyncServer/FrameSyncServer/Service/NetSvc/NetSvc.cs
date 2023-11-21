@@ -76,6 +76,18 @@ namespace HOKServer {
                 case CMD.ReqMatch:
                     MatchSys.Instance.ReqMatch(pack);
                     break;
+                case CMD.SndConfirm:
+                    RoomSys.Instance.SndConfirm(pack);
+                    break;
+                case CMD.SndSelect:
+                    RoomSys.Instance.SndSelect(pack);
+                    break;
+                case CMD.SndLoadPrg:
+                    RoomSys.Instance.SndLoadPrg(pack);
+                    break;
+                case CMD.ReqBattleStart:
+                    RoomSys.Instance.ReqBattleStart(pack);
+                    break;
                 case CMD.None:
                 default:
                     break;
