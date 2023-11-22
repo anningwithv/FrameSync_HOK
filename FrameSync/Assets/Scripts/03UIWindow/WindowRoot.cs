@@ -66,4 +66,102 @@ public class WindowRoot : MonoBehaviour
     {
         ipt.gameObject.SetActive(state);
     }
+
+    protected void SetSprite(Image image, string path)
+    {
+        Sprite sp = ResSvc.Instance.LoadSprite(path, true);
+        image.sprite = sp;
+    }
+
+    protected Transform GetTrans(Transform trans, string name)
+    {
+        if (trans != null)
+        {
+            return trans.Find(name);
+        }
+        else
+        {
+            return transform.Find(name);
+        }
+    }
+    protected Image GetImage(Transform trans, string path)
+    {
+        if (trans != null)
+        {
+            return trans.Find(path).GetComponent<Image>();
+        }
+        else
+        {
+            return transform.Find(path).GetComponent<Image>();
+        }
+    }
+    protected Image GetImage(Transform trans)
+    {
+        if (trans != null)
+        {
+            return trans.GetComponent<Image>();
+        }
+        else
+        {
+            return transform.GetComponent<Image>();
+        }
+    }
+    protected Text GetText(Transform trans, string path)
+    {
+        if (trans != null)
+        {
+            return trans.Find(path).GetComponent<Text>();
+        }
+        else
+        {
+            return transform.Find(path).GetComponent<Text>();
+        }
+    }
+
+    private T GetOrAddComponent<T>(GameObject go) where T : Component
+    {
+        T t = go.GetComponent<T>();
+        if (t == null)
+        {
+            t = go.AddComponent<T>();
+        }
+        return t;
+    }
+
+    protected void OnClick(GameObject go, Action<PointerEventData, object[]> clickCB, params object[] args)
+    {
+        PEListener listener = GetOrAddComponent<PEListener>(go);
+        listener.onClick = clickCB;
+        if (args != null)
+        {
+            listener.args = args;
+        }
+    }
+    protected void OnClickDown(GameObject go, Action<PointerEventData, object[]> clickDownCB, params object[] args)
+    {
+        PEListener listener = GetOrAddComponent<PEListener>(go);
+        listener.onClickDown = clickDownCB;
+        if (args != null)
+        {
+            listener.args = args;
+        }
+    }
+    protected void OnClickUp(GameObject go, Action<PointerEventData, object[]> clickUpCB, params object[] args)
+    {
+        PEListener listener = GetOrAddComponent<PEListener>(go);
+        listener.onClickUp = clickUpCB;
+        if (args != null)
+        {
+            listener.args = args;
+        }
+    }
+    protected void OnDrag(GameObject go, Action<PointerEventData, object[]> dragCB, params object[] args)
+    {
+        PEListener listener = GetOrAddComponent<PEListener>(go);
+        listener.onDrag = dragCB;
+        if (args != null)
+        {
+            listener.args = args;
+        }
+    }
 }
