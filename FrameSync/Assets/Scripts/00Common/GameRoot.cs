@@ -1,4 +1,5 @@
-﻿using FrameSyncProtocol;
+﻿using System.Collections.Generic;
+using FrameSyncProtocol;
 using PEUtils;
 using UnityEngine;
 
@@ -86,6 +87,33 @@ public class GameRoot : MonoBehaviour
     {
         set { userData = value; }
         get { return userData; }
+    }
+
+    private uint roomID;
+    public uint RoomID
+    {
+        set { roomID = value; }
+        get { return roomID; }
+    }
+    private int mapID;
+    public int MapID
+    {
+        set { mapID = value; }
+        get { return mapID; }
+    }
+
+    private List<BattleHeroData> heroLst;
+    public List<BattleHeroData> HeroLst
+    {
+        set { heroLst = value; }
+        get { return heroLst; }
+    }
+
+    private int selfIndex;
+    public int SelfIndex
+    {
+        set { selfIndex = value; }
+        get { return selfIndex; }
     }
     #endregion
 }

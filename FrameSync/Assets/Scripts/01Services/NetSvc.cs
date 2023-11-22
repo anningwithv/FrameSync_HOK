@@ -135,6 +135,21 @@ public class NetSvc : MonoBehaviour
             case CMD.RspMatch:
                 LobbySys.Instance.RspMatch(msg);
                 break;
+            case CMD.NtfConfirm:
+                LobbySys.Instance.NtfConfirm(msg);
+                break;
+            case CMD.NtfSelect:
+                LobbySys.Instance.NtfSelect(msg);
+                break;
+            case CMD.NtfLoadRes:
+                LobbySys.Instance.NtfLoadRes(msg);
+                break;
+            case CMD.NtfLoadPrg:
+                BattleSys.Instance.NtfLoadPrg(msg);
+                break;
+            case CMD.RspBattleStart:
+                BattleSys.Instance.RspBattleStart(msg);
+                break;
             default:
                 break;
         }
