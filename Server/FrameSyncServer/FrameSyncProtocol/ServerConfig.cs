@@ -10,4 +10,9 @@ namespace FrameSyncProtocol
         public const int ConfirmCountDown = 15;
         public const int SelectCountDown = 15;
     }
+
+    public class Configs
+    {
+        public const float ClientLogicFrameDeltaSec = 0.066f;//s
+    }
 }

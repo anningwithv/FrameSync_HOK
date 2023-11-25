@@ -93,11 +93,32 @@ public class NetSvc : MonoBehaviour
                     HandoutMsg(msg);
                 }
             }
+
+            return;
+        }
+
+        if (GMSystem.Instance.isActive)
+        {
+            if (msgPackQue.Count > 0)
+            {
+                lock (pkgque_lock)
+                {
+                    HOKMsg msg = msgPackQue.Dequeue();
+                    HandoutMsg(msg);
+                }
+            }
         }
     }
 
     public void SendMsg(HOKMsg msg, Action<bool> cb = null)
     {
+        if (GMSystem.Instance.isActive)
+        {
+            GMSystem.Instance.SimulateServerRcvMsg(msg);
+            cb?.Invoke(true);
+            return;
+        }
+
         if (client.clientSession != null && client.clientSession.IsConnected())
         {
             client.clientSession.SendMsg(msg);

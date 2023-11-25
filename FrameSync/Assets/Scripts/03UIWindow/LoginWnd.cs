@@ -47,4 +47,10 @@ public class LoginWnd : WindowRoot
             root.ShowTips("账号或密码为空");
         }
     }
+
+    public void ClickGMBattleBtn()
+    {
+        SetWndState(false);
+        GMSystem.Instance.StartSimulate();
+    }
 }

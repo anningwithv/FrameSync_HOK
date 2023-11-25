@@ -70,6 +70,8 @@ public class GameRoot : MonoBehaviour
         lobby.InitSys();
         BattleSys battle = GetComponent<BattleSys>();
         battle.InitSys();
+        GMSystem gm = GetComponent<GMSystem>();
+        gm.InitSys();
 
         //login
         PELog.Log("EnterLogin.");

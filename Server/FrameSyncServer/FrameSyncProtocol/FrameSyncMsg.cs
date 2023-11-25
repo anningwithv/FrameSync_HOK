@@ -24,6 +24,9 @@ namespace FrameSyncProtocol
 
         public ReqBattleStart reqBattleStart;
         public RspBatlleStart rspBatlleStart;
+
+        public SndOpKey sndOpKey;
+        public NtfOpKey ntfOpKey;
     }
 
     #region 登录相关
@@ -159,7 +162,18 @@ namespace FrameSyncProtocol
     {
 
     }
-
+    [Serializable]
+    public class SndOpKey
+    {
+        public uint roomID;
+        public OpKey opKey;
+    }
+    [Serializable]
+    public class NtfOpKey
+    {
+        public uint frameID;
+        public List<OpKey> keyList;
+    }
     #endregion
     //错误码
     public enum ErrorCode
@@ -196,6 +210,10 @@ namespace FrameSyncProtocol
         //战斗
         ReqBattleStart = 12,
         RspBattleStart = 13,
+
+        //操作码
+        SndOpKey = 100,
+        NtfOpKey = 101
     }
 
     
