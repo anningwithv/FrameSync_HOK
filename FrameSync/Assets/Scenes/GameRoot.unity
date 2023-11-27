@@ -586,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadWnd: {fileID: 493232845}
   playWnd: {fileID: 1916696063}
+  isTickFight: 0
 --- !u!114 &484968299
 MonoBehaviour:
   m_ObjectHideFlags: 0

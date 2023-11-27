@@ -2,6 +2,8 @@
 	功能: 资源服务
 *************************************************/
 
+using PEMath;
+using PEPhysx;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -66,6 +68,11 @@ public class ResSvc : MonoBehaviour
         };
     }
 
+    private void Update()
+    {
+        prgCB?.Invoke();
+    }
+
     public UnitCfg GetUnitConfigByID(int unitID)
     {
         switch (unitID)
@@ -75,16 +82,61 @@ public class ResSvc : MonoBehaviour
                 {
                     unitID = 101,
                     unitName = "亚瑟",
-                    resName = "arthur"
+                    resName = "arthur",
+
+                    hp = 6500,
+                    def = 0,
+                    moveSpeed = 5,
+                    colliCfg = new ColliderConfig
+                    {
+                        mType = ColliderType.Cylinder,
+                        mRadius = (PEInt)0.5f
+                    }
                 };
             case 102:
                 return new UnitCfg
                 {
                     unitID = 102,
                     unitName = "后羿",
-                    resName = "houyi"
+                    resName = "houyi",
+
+                    hp = 3500,
+                    def = 10,
+                    moveSpeed = 5,
+                    colliCfg = new ColliderConfig
+                    {
+                        mType = ColliderType.Cylinder,
+                        mRadius = (PEInt)0.5f
+                    }
                 };
         }
         return null;
+    }
+
+    public MapCfg GetMapConfigByID(int mapID)
+    {
+        switch (mapID)
+        {
+            case 101:
+                return new MapCfg
+                {
+                    mapID = 101,
+
+                    bornDelay = 15000,
+                    bornInterval = 2000,
+                    waveInterval = 50000
+                };
+            case 102:
+                return new MapCfg
+                {
+                    mapID = 102,
+
+                    bornDelay = 15000,
+                    bornInterval = 2000,
+                    waveInterval = 50000
+                };
+            default:
+                return null;
+        }
     }
 }
