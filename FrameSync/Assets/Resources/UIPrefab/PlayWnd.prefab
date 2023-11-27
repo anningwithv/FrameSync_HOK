@@ -383,6 +383,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a3d3252c0f57047a640e4f43616c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgCancelSkill: {fileID: 366162956}
+  imgTouch: {fileID: 7567887006240556001}
+  imgDirBg: {fileID: 5518116233706609824}
+  imgDirPoint: {fileID: 7062852016800069009}
+  ArrowRoot: {fileID: 9121493392543998035}
+  skaItem: {fileID: 5014027683987043408}
+  sk1Item: {fileID: 9088188342960632516}
+  sk2Item: {fileID: 3720293172726530087}
+  sk3Item: {fileID: 387658458819010627}
+  imgInfoRoot: {fileID: 9097302048462082107}
 --- !u!1 &314580482618102089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,6 +1979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20141390302088623}
+  - component: {fileID: 387658458819010627}
   m_Layer: 5
   m_Name: imgSk3
   m_TagString: Untagged
@@ -2000,6 +2011,25 @@ RectTransform:
   m_AnchoredPosition: {x: -150, y: 490}
   m_SizeDelta: {x: 139, y: 139}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &387658458819010627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142474467277456307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f859565a90bb4e94e4f660ba81c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgCycle: {fileID: 5172462254021995098}
+  skillIcon: {fileID: 6653909551368075962}
+  imgCD: {fileID: 6017990035151442720}
+  txtCD: {fileID: 7557839245168770836}
+  imgPoint: {fileID: 3892911518812088952}
+  imgForbid: {fileID: 7936284411101421773}
+  EffectRoot: {fileID: 9026619268312468738}
 --- !u!1 &2201609801049786222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,6 +3460,7 @@ GameObject:
   - component: {fileID: 914606853658184878}
   - component: {fileID: 42601183945619695}
   - component: {fileID: 1337883126727080221}
+  - component: {fileID: 5014027683987043408}
   m_Layer: 5
   m_Name: imgSka
   m_TagString: Untagged
@@ -3496,6 +3527,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5014027683987043408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015897788942582996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f859565a90bb4e94e4f660ba81c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgCycle: {fileID: 0}
+  skillIcon: {fileID: 1337883126727080221}
+  imgCD: {fileID: 0}
+  txtCD: {fileID: 0}
+  imgPoint: {fileID: 0}
+  imgForbid: {fileID: 0}
+  EffectRoot: {fileID: 2714509547475304358}
 --- !u!1 &4146509368253822603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,6 +3827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358825868569090346}
+  - component: {fileID: 9088188342960632516}
   m_Layer: 5
   m_Name: imgSk1
   m_TagString: Untagged
@@ -3808,6 +3859,25 @@ RectTransform:
   m_AnchoredPosition: {x: -490, y: 150}
   m_SizeDelta: {x: 139, y: 139}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9088188342960632516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462789398393341314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f859565a90bb4e94e4f660ba81c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgCycle: {fileID: 5561226225991287189}
+  skillIcon: {fileID: 8876343534188261169}
+  imgCD: {fileID: 6994255714109106255}
+  txtCD: {fileID: 9192283520522688061}
+  imgPoint: {fileID: 3857331279768560547}
+  imgForbid: {fileID: 5380907149805323081}
+  EffectRoot: {fileID: 6531167354279369313}
 --- !u!1 &4683027458676102322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,6 +5205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1173979755231815024}
+  - component: {fileID: 3720293172726530087}
   m_Layer: 5
   m_Name: imgSk2
   m_TagString: Untagged
@@ -5166,6 +5237,25 @@ RectTransform:
   m_AnchoredPosition: {x: -370, y: 370}
   m_SizeDelta: {x: 139, y: 139}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3720293172726530087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564464061790973818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f859565a90bb4e94e4f660ba81c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgCycle: {fileID: 6493093454933643921}
+  skillIcon: {fileID: 3162136710486970438}
+  imgCD: {fileID: 3070083240535773336}
+  txtCD: {fileID: 5683929584002214349}
+  imgPoint: {fileID: 3651315943709335325}
+  imgForbid: {fileID: 8914913442633889340}
+  EffectRoot: {fileID: 2619828969073882882}
 --- !u!1 &7786425470961199460
 GameObject:
   m_ObjectHideFlags: 0

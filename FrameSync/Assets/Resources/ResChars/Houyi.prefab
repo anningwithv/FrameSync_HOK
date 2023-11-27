@@ -591,13 +591,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsSyncPos: 1
   PredictPos: 1
-  PredictMaxCount: 10
+  PredictMaxCount: 15
   SmoothPos: 1
-  viewPosAccer: 5
+  viewPosAccer: 10
   IsSyncDir: 1
   SmoothDir: 1
-  viewDirAccer: 5
-  AngleMultiplier: 5
+  viewDirAccer: 10
+  AngleMultiplier: 8
   RoationRoot: {fileID: 7238942558732667199}
   skillRange: {fileID: 4117883138375203420}
   fade: 0

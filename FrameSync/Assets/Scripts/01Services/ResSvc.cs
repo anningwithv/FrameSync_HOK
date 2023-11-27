@@ -112,7 +112,8 @@ public class ResSvc : MonoBehaviour
                     {
                         mType = ColliderType.Cylinder,
                         mRadius = (PEInt)0.5f
-                    }
+                    },
+                    skillArr = new int[] { 1010, 1011, 1012, 1013 }
                 };
             case 102:
                 return new UnitCfg
@@ -128,10 +129,37 @@ public class ResSvc : MonoBehaviour
                     {
                         mType = ColliderType.Cylinder,
                         mRadius = (PEInt)0.5f
-                    }
+                    },
+                    skillArr = new int[] { 1020, 1021, 1022, 1023 }
                 };
         }
         return null;
+    }
+
+    public SkillCfg GetSkillConfigByID(int skillID)
+    {
+        switch (skillID)
+        {
+            case 1010:
+                return ResSkillConfigs.sk_1010;
+            case 1011:
+                return ResSkillConfigs.sk_1011;
+            case 1012:
+                return ResSkillConfigs.sk_1012;
+            case 1013:
+                return ResSkillConfigs.sk_1013;
+            case 1020:
+                return ResSkillConfigs.sk_1020;
+            case 1021:
+                return ResSkillConfigs.sk_1021;
+            case 1022:
+                return ResSkillConfigs.sk_1022;
+            case 1023:
+                return ResSkillConfigs.sk_1023;
+            default:
+                this.Error("Get Skill Config Failed,skillID:" + skillID);
+                return null;
+        }
     }
 
     public MapCfg GetMapConfigByID(int mapID)
@@ -142,7 +170,8 @@ public class ResSvc : MonoBehaviour
                 return new MapCfg
                 {
                     mapID = 101,
-
+                    blueBorn = new PEVector3(-27, 0, 0),
+                    redBorn = new PEVector3(27, 0, 0),
                     bornDelay = 15000,
                     bornInterval = 2000,
                     waveInterval = 50000
@@ -151,7 +180,8 @@ public class ResSvc : MonoBehaviour
                 return new MapCfg
                 {
                     mapID = 102,
-
+                    blueBorn = new PEVector3(-27, 0, 0),
+                    redBorn = new PEVector3(27, 0, 0),
                     bornDelay = 15000,
                     bornInterval = 2000,
                     waveInterval = 50000

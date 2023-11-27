@@ -9,6 +9,7 @@ public class FightMgr : MonoBehaviour
     MapRoot mapRoot;
     EnvColliders logicEnv;
 
+    Transform transFollow;
     //英雄角色集合
     List<Hero> heroLst;
     public void Init(List<BattleHeroData> battleHeroLst, MapCfg mapCfg)
@@ -67,9 +68,17 @@ public class FightMgr : MonoBehaviour
         logicEnv.Init();
     }
 
+    public void InitCamFollowTrans(int posIndex)
+    {
+        transFollow = heroLst[posIndex].mainViewUnit.transform;
+    }
+
     private void Update()
     {
-
+        if (transFollow != null)
+        {
+            mapRoot.transCameraRoot.position = transFollow.position;
+        }
     }
 
     public void Tick()
@@ -84,7 +93,7 @@ public class FightMgr : MonoBehaviour
 
     public void UnInit()
     {
-
+        heroLst.Clear();
     }
 
     List<ColliderConfig> GenerateEnvColliCfgs(Transform transEnvRoot)
@@ -137,5 +146,10 @@ public class FightMgr : MonoBehaviour
     public List<PEColliderBase> GetEnvColliders()
     {
         return logicEnv.GetEnvColliders();
+    }
+
+    public MainLogicUnit GetSelfHero(int posIndex)
+    {
+        return heroLst[posIndex];
     }
 }

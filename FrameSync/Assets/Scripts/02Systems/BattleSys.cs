@@ -12,6 +12,8 @@ public class BattleSys : SysRoot
     public LoadWnd loadWnd;
     public PlayWnd playWnd;
 
+    public float SkillDisMultipler;
+
     public bool isTickFight;
     private int mapID;
 
@@ -104,10 +106,10 @@ public class BattleSys : SysRoot
 
     public void RspBattleStart(HOKMsg msg)
     {
+        fightMgr.InitCamFollowTrans(root.SelfIndex);
+        playWnd.InitSkillInfo();
         loadWnd.SetWndState(false);
-
         audioSvc.PlayBGMusic(NameDefine.BattleBGMusic);
-
         isTickFight = true;
     }
 
@@ -123,6 +125,11 @@ public class BattleSys : SysRoot
     public List<PEColliderBase> GetEnvColliders()
     {
         return fightMgr.GetEnvColliders();
+    }
+
+    public MainLogicUnit GetSelfHero()
+    {
+        return fightMgr.GetSelfHero(root.SelfIndex);
     }
 
     #region API Func
@@ -152,6 +159,12 @@ public class BattleSys : SysRoot
         msg.sndOpKey.opKey.moveKey.keyID = KeyID;
         NetSvc.Instance.SendMsg(msg);
         return true;
+    }
+
+    //TODO 发送技能施放指令
+    public void SendSkillKey(int skillID, Vector3 vec)
+    {
+        this.Log($"Rls Skill:{skillID} with Data:{vec}");
     }
     #endregion
 }

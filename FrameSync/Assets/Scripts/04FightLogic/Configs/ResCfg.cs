@@ -32,6 +32,9 @@ public class UnitCfg
 
     //碰撞体
     public ColliderConfig colliCfg;
+
+    //技能ID数组
+    public int[] skillArr;
 }
 
 public class MapCfg
