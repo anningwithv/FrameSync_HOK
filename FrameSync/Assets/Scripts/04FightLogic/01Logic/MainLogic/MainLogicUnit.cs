@@ -4,6 +4,7 @@
 
 using FrameSyncProtocol;
 using PEMath;
+using UnityEngine;
 
 public enum UnitStateEnum
 {
@@ -31,6 +32,9 @@ public abstract partial class MainLogicUnit : LogicUnit
     public LogicUnitData ud;
     public UnitStateEnum unitState;
     public UnitTypeEnum unitType;
+    public MainViewUnit mainViewUnit;
+
+    protected string pathPrefix = "";
 
     public MainLogicUnit(LogicUnitData ud)
     {
@@ -47,6 +51,14 @@ public abstract partial class MainLogicUnit : LogicUnit
         InitSkill();
         //初始化移动
         InitMove();
+
+        GameObject go = ResSvc.Instance.LoadPrefab(pathPrefix + "/" + ud.unitCfg.resName);
+        mainViewUnit = go.GetComponent<MainViewUnit>();
+        if (mainViewUnit == null)
+        {
+            this.Error("Get MainViewUnit Error:" + unitName);
+        }
+        mainViewUnit.Init(this);
 
         unitState = UnitStateEnum.Alive;
     }

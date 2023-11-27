@@ -86,6 +86,12 @@
     <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicSkill.cs" />
     <Compile Include="Assets\Scripts\04FightLogic\00Common\MapRoot.cs" />
     <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicMove.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\02View\HeroView.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\02View\ViewUnit.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\02View\MainViewUnit.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\Configs\ResSkillConfigs.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\Configs\SkillCfg.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\Configs\TargetCfg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\00Common\Libs\Debug\netstandard2.0\System.Buffers.dll" />

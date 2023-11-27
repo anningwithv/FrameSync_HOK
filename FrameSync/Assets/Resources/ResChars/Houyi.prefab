@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8787101760912334512
 Transform:
   m_ObjectHideFlags: 0
@@ -450,6 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7238942558968534912}
   - component: {fileID: 3591902702655391229}
+  - component: {fileID: 3145448484713064346}
   m_Layer: 0
   m_Name: Houyi
   m_TagString: Untagged
@@ -576,6 +577,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3145448484713064346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7238942558968534919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c3fda983d67c54ea75f9053407bd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSyncPos: 1
+  PredictPos: 1
+  PredictMaxCount: 10
+  SmoothPos: 1
+  viewPosAccer: 5
+  IsSyncDir: 1
+  SmoothDir: 1
+  viewDirAccer: 5
+  AngleMultiplier: 5
+  RoationRoot: {fileID: 7238942558732667199}
+  skillRange: {fileID: 4117883138375203420}
+  fade: 0
+  ani: {fileID: 0}
+  sk1: {fileID: 0}
+  sk2: {fileID: 7287407273985570658}
+  sk3: {fileID: 8787101760912334512}
 --- !u!1001 &7238942558732276695
 PrefabInstance:
   m_ObjectHideFlags: 0

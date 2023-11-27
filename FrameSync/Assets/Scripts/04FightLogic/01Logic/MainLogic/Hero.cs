@@ -23,5 +23,7 @@ public class Hero : MainLogicUnit {
 
         unitType = UnitTypeEnum.Hero;
         unitName = ud.unitCfg.unitName + "_" + userName;
+
+        pathPrefix = "ResChars";
     }
 }

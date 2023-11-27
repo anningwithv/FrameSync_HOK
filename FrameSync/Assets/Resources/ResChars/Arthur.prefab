@@ -187,6 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5669233777762471083}
   - component: {fileID: 7028611493261094304}
+  - component: {fileID: 7842016271637114607}
   m_Layer: 0
   m_Name: Arthur
   m_TagString: Untagged
@@ -311,6 +312,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7842016271637114607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669233777762471084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c3fda983d67c54ea75f9053407bd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSyncPos: 1
+  PredictPos: 1
+  PredictMaxCount: 10
+  SmoothPos: 1
+  viewPosAccer: 5
+  IsSyncDir: 1
+  SmoothDir: 1
+  viewDirAccer: 5
+  AngleMultiplier: 5
+  RoationRoot: {fileID: 2990674558125748809}
+  skillRange: {fileID: 1440414209279517047}
+  fade: 0
+  ani: {fileID: 2990674558116001777}
+  sk1: {fileID: 0}
+  sk2: {fileID: 0}
+  sk3: {fileID: 0}
 --- !u!1 &9124188277922223319
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +444,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1d14f6b5db6713b40925b23dbc80fcde, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83bc0f5634e205244a0457d0f1632e65, type: 3}
+--- !u!111 &2990674558116001777 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 11100000, guid: 83bc0f5634e205244a0457d0f1632e65,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990674558125877393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2990674558125748809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400088, guid: 83bc0f5634e205244a0457d0f1632e65,

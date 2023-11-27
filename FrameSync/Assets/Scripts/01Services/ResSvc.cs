@@ -73,6 +73,27 @@ public class ResSvc : MonoBehaviour
         prgCB?.Invoke();
     }
 
+    private Dictionary<string, GameObject> goDic = new Dictionary<string, GameObject>();
+    public GameObject LoadPrefab(string path, bool cache = false)
+    {
+        GameObject prefab = null;
+        if (!goDic.TryGetValue(path, out prefab))
+        {
+            prefab = Resources.Load<GameObject>(path);
+            if (cache)
+            {
+                goDic.Add(path, prefab);
+            }
+        }
+
+        GameObject go = null;
+        if (prefab != null)
+        {
+            go = Instantiate(prefab);
+        }
+        return go;
+    }
+
     public UnitCfg GetUnitConfigByID(int unitID)
     {
         switch (unitID)

@@ -21,22 +21,32 @@ public abstract class LogicUnit : ILogic {
 
     #region Key Properties
     //逻辑位置
+    public bool isPosChanged = false;
     PEVector3 logicPos;
-    public PEVector3 LogicPos {
-        set {
+    public PEVector3 LogicPos
+    {
+        set
+        {
             logicPos = value;
+            isPosChanged = true;
         }
-        get {
+        get
+        {
             return logicPos;
         }
     }
     //逻辑方向
+    public bool isDirChanged = false;
     PEVector3 logicDir;
-    public PEVector3 LogicDir {
-        set {
+    public PEVector3 LogicDir
+    {
+        set
+        {
             logicDir = value;
+            isDirChanged = true;
         }
-        get {
+        get
+        {
             return logicDir;
         }
     }
