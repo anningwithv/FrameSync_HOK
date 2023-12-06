@@ -71,7 +71,7 @@ public abstract partial class MainLogicUnit : LogicUnit
 
     public override void LogicUnInit()
     {
-        UnInitSkill();
+        //UnInitSkill();
         UnInitMove();
     }
 
@@ -80,7 +80,7 @@ public abstract partial class MainLogicUnit : LogicUnit
         switch (key.keyType)
         {
             case KeyType.Skill:
-                //TODO
+                InputSkillKey(key.skillKey);
                 break;
             case KeyType.Move:
                 PEInt x = PEInt.zero;
@@ -94,5 +94,20 @@ public abstract partial class MainLogicUnit : LogicUnit
                 this.Error("KEY is not exist");
                 break;
         }
+    }
+
+    public void PlayAni(string aniName)
+    {
+        mainViewUnit.PlayAni(aniName);
+    }
+
+    public void PlayAudio(string audioName, bool loop = false, int delay = 0)
+    {
+        mainViewUnit.PlayAudio(audioName, loop, delay);
+    }
+
+    public virtual bool IsPlayerSelf()
+    {
+        return false;
     }
 }

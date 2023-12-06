@@ -116,4 +116,9 @@ public abstract class ViewUnit : MonoBehaviour {
     }
 
     public abstract void PlayAni(string aniName);
+
+    public virtual void PlayAudio(string audioName, bool loop = false, int delay = 0)
+    {
+        AudioSvc.Instance.PlayEntityAudio(audioName, GetComponent<AudioSource>(), loop, delay);
+    }
 }

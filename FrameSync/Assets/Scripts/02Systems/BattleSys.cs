@@ -11,6 +11,7 @@ public class BattleSys : SysRoot
 
     public LoadWnd loadWnd;
     public PlayWnd playWnd;
+    public HPWnd hpWnd;
 
     public float SkillDisMultipler;
 
@@ -74,9 +75,9 @@ public class BattleSys : SysRoot
     void SceneLoadDone()
     {
         this.Log("Scene load done");
-        //TODO
         //初始化UI
         playWnd.SetWndState();
+        hpWnd.SetWndState();
         //加载角色及资源
         //初始化战斗
         fightGO = new GameObject
@@ -130,6 +131,19 @@ public class BattleSys : SysRoot
     public MainLogicUnit GetSelfHero()
     {
         return fightMgr.GetSelfHero(root.SelfIndex);
+    }
+
+    public TeamEnum GetCurrentUserTeam()
+    {
+        int sep = heroLst.Count / 2;
+        if (root.SelfIndex < sep)
+        {
+            return TeamEnum.Blue;
+        }
+        else
+        {
+            return TeamEnum.Red;
+        }
     }
 
     #region API Func

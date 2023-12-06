@@ -56,44 +56,55 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicUnit.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\SkillItem.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\02View\ViewUnit.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\LogicUnit.cs" />
     <Compile Include="Assets\Scripts\02Systems\BattleSys.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\TipsWnd.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\SkillWnd.cs" />
     <Compile Include="Assets\Scripts\00Common\Constant.cs" />
     <Compile Include="Assets\Scripts\01Services\ResSvc.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\Configs\ResSkillConfigs.cs" />
     <Compile Include="Assets\Scripts\01Services\AudioSvc.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\PEListener.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\Hero.cs" />
     <Compile Include="Assets\Scripts\02Systems\SysRoot.cs" />
     <Compile Include="Assets\Scripts\02Systems\LobbySys.cs" />
     <Compile Include="Assets\Scripts\02Systems\GMSystem.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\LoadWnd.cs" />
     <Compile Include="Assets\Scripts\04FightLogic\Configs\ResCfg.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\00Common\FightMgr.cs" />
     <Compile Include="Assets\Scripts\02Systems\LoginSys.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\02View\MainViewUnit.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\WindowRoot.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\Configs\TargetCfg.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\02View\HeroView.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\MatchWnd.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\SelectWnd.cs" />
     <Compile Include="Assets\Scripts\00Common\GameRoot.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\LoginWnd.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\00Common\MapRoot.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\StartWnd.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicMove.cs" />
     <Compile Include="Assets\Scripts\01Services\NetSvc.cs" />
     <Compile Include="Assets\Scripts\03UIWindow\PlayWnd.cs" />
     <Compile Include="Assets\Scripts\01Services\ClientSession.cs" />
-    <Compile Include="Assets\Scripts\03UIWindow\LobbyWnd.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\Hero.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\01Logic\LogicUnit.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicAttrs.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicUnit.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\00Common\FightMgr.cs" />
     <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicSkill.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\00Common\MapRoot.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicMove.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\02View\HeroView.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\02View\ViewUnit.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\02View\MainViewUnit.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\Configs\ResSkillConfigs.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\MainLogicAttrs.cs" />
     <Compile Include="Assets\Scripts\04FightLogic\Configs\SkillCfg.cs" />
-    <Compile Include="Assets\Scripts\04FightLogic\Configs\TargetCfg.cs" />
-    <Compile Include="Assets\Scripts\03UIWindow\SkillWnd.cs" />
-    <Compile Include="Assets\Scripts\03UIWindow\SkillItem.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\LobbyWnd.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\Skill\CalcRule.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\Skill\Skill.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\Soldier.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\01Logic\MainLogic\Tower.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\ItemHPTower.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\JumpNum.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\ItemHP.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\ItemHPHero.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\ItemHPSoldier.cs" />
+    <Compile Include="Assets\Scripts\03UIWindow\HPWnd.cs" />
+    <Compile Include="Assets\Scripts\04FightLogic\Configs\BulletCfg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\00Common\Libs\Debug\netstandard2.0\System.Buffers.dll" />
@@ -357,11 +368,17 @@
     <Reference Include="KCPNet">
       <HintPath>Assets\Scripts\00Common\Libs\Debug\netstandard2.0\KCPNet.dll</HintPath>
     </Reference>
+    <Reference Include="PEPhysx">
+      <HintPath>Assets\Scripts\00Common\Libs\PEPhysx.dll</HintPath>
+    </Reference>
     <Reference Include="Kcp">
       <HintPath>Assets\Scripts\00Common\Libs\Debug\netstandard2.0\Kcp.dll</HintPath>
     </Reference>
     <Reference Include="FrameSyncProtocol">
       <HintPath>Assets\Scripts\00Common\Libs\Debug\netstandard2.0\FrameSyncProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="PEMath">
+      <HintPath>Assets\Scripts\00Common\Libs\PEMath.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\Scripts\00Common\Libs\Debug\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -371,12 +388,6 @@
     </Reference>
     <Reference Include="PEUtils">
       <HintPath>Assets\Scripts\00Common\Libs\PEUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="PEPhysx">
-      <HintPath>Assets\Scripts\00Common\Libs\PEPhysx.dll</HintPath>
-    </Reference>
-    <Reference Include="PEMath">
-      <HintPath>Assets\Scripts\00Common\Libs\PEMath.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Program Files\Unity\2021.3.26f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

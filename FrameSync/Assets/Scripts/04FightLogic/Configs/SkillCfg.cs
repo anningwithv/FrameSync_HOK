@@ -21,6 +21,10 @@ public class SkillCfg {
     /// </summary>
     public TargetCfg targetCfg;
     /// <summary>
+    /// 弹道配置
+    /// </summary>
+    public BulletCfg bulletCfg;
+    /// <summary>
     /// CD时间：ms
     /// </summary>
     public int cdTime;
@@ -46,7 +50,10 @@ public class SkillCfg {
     /// </summary>
     public int[] buffIDArr;
 
-    //音效相关TODO
+    //音效相关
+    public string audio_start;//施法开始
+    public string audio_work;//施法成功
+    public string audio_hit;//施法命中
 }
 
 public enum ReleaseModeEnum {

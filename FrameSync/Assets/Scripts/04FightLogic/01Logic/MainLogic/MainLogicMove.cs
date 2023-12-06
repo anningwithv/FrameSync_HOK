@@ -66,6 +66,15 @@ public partial class MainLogicUnit
         //TODO
     }
 
+    /// <summary>
+    /// 模拟输入方向
+    /// </summary>
+    /// <param name="dir"></param>
+    public void InputFakeMoveKey(PEVector3 dir)
+    {
+        InputDir = dir;
+    }
+
     public void InputMoveKey(PEVector3 dir)
     {
         InputDir = dir;
