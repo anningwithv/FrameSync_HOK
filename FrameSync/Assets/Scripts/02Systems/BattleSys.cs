@@ -178,7 +178,27 @@ public class BattleSys : SysRoot
     //TODO 发送技能施放指令
     public void SendSkillKey(int skillID, Vector3 vec)
     {
-        this.Log($"Rls Skill:{skillID} with Data:{vec}");
+        //this.Log($"Rls Skill:{skillID} with Data:{vec}");
+        HOKMsg netSkillMsg = new HOKMsg
+        {
+            cmd = CMD.SndOpKey,
+            sndOpKey = new SndOpKey
+            {
+                roomID = root.RoomID,
+                opKey = new OpKey
+                {
+                    opIndex = root.SelfIndex,
+                    keyType = KeyType.Skill,
+                    skillKey = new SkillKey
+                    {
+                        skillID = (uint)skillID,
+                        x_value = ((PEInt)vec.x).ScaledValue,
+                        z_value = ((PEInt)vec.z).ScaledValue,
+                    }
+                }
+            }
+        };
+        netSvc.SendMsg(netSkillMsg);
     }
     #endregion
 }

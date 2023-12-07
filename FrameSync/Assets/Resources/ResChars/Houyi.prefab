@@ -600,8 +600,9 @@ MonoBehaviour:
   AngleMultiplier: 8
   RoationRoot: {fileID: 7238942558732667199}
   skillRange: {fileID: 4117883138375203420}
-  fade: 0
-  ani: {fileID: 0}
+  fade: 0.25
+  hpRoot: {fileID: 6029108934873904225}
+  ani: {fileID: 7238942558722231479}
   sk1: {fileID: 0}
   sk2: {fileID: 7287407273985570658}
   sk3: {fileID: 8787101760912334512}
@@ -678,6 +679,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d2c278d8def2f8e4d8ad983afaa1ddbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd10ba947a2a3574498ede806d06f855, type: 3}
+--- !u!111 &7238942558722231479 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 11100000, guid: fd10ba947a2a3574498ede806d06f855,
+    type: 3}
+  m_PrefabInstance: {fileID: 7238942558732276695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7238942558732667199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400104, guid: fd10ba947a2a3574498ede806d06f855,

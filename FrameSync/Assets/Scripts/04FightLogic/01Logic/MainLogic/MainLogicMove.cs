@@ -58,7 +58,7 @@ public partial class MainLogicUnit
             LogicPos = collider.mPos + adj;
         }
         collider.mPos = LogicPos;
-        this.Log($"{unitName} pos:" + collider.mPos.ConvertViewVector3());
+        //this.Log($"{unitName} pos:" + collider.mPos.ConvertViewVector3());
     }
 
     void UnInitMove()

@@ -180,7 +180,7 @@ public class ResSvc : MonoBehaviour
                 return new MapCfg
                 {
                     mapID = 102,
-                    blueBorn = new PEVector3(-27, 0, 0),
+                    blueBorn = new PEVector3(23, 0, 0),
                     redBorn = new PEVector3(27, 0, 0),
                     bornDelay = 15000,
                     bornInterval = 2000,
