@@ -61,13 +61,31 @@ public abstract class MainViewUnit : ViewUnit {
     }
 
     public override void PlayAni(string aniName) {
-        if(aniName.Contains("walk")) {
+        if (aniName == "atk")
+        {
+            aniName = "atk" + Random.Range(1, 3);
+        }
+
+        if (aniName.Contains("walk"))
+        {
             float moveRate = mainLogicUnit.LogicMoveSpeed.RawFloat / aniMoveSpeedBase;
             ani[aniName].speed = moveRate;
             ani.CrossFade(aniName, fade / moveRate);
         }
-        else {
-            if(ani == null) {
+        else if (aniName.Contains("atk"))
+        {
+            if (ani.IsPlaying(aniName))
+            {
+                ani.Stop();
+            }
+            float attackRate = mainLogicUnit.AttackSpeedRate.RawFloat / aniAttackSpeedBase;
+            ani[aniName].speed = attackRate;
+            ani.CrossFade(aniName, fade / attackRate);
+        }
+        else
+        {
+            if (ani == null)
+            {
                 this.Log("ani is null");
             }
             ani.CrossFade(aniName, fade);

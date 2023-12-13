@@ -25,9 +25,12 @@ public class FightMgr : MonoBehaviour
         //delay 以后 出生小兵。。。
     }
 
+
     void InitHero(List<BattleHeroData> battleHeroLst, MapCfg mapCfg)
     {
         int sep = battleHeroLst.Count / 2;
+        Hero[] blueTeamHero = new Hero[sep];
+        Hero[] redTeamHero = new Hero[sep];
         for (int i = 0; i < battleHeroLst.Count; i++)
         {
             HeroData hd = new HeroData
@@ -44,17 +47,23 @@ public class FightMgr : MonoBehaviour
                 hd.teamEnum = TeamEnum.Blue;
                 hd.bornPos = mapCfg.blueBorn;
                 hero = new Hero(hd);
+                blueTeamHero[i] = hero;
             }
             else
             {
                 hd.teamEnum = TeamEnum.Red;
                 hd.bornPos = mapCfg.redBorn;
                 hero = new Hero(hd);
+                redTeamHero[i - sep] = hero;
             }
             hero.LogicInit();
             heroLst.Add(hero);
         }
+
+        CalcRule.blueTeamHero = blueTeamHero;
+        CalcRule.redTeamHero = redTeamHero;
     }
+
 
     void InitEnv()
     {
